@@ -1,0 +1,16 @@
+---
+title: Discord
+description: Setup Discord
+actions:
+  - !writeStatus: { status: "Installing Discord" }
+
+  - !run:
+    exe: "curl.exe"
+    args: "-L \"https://discord.com/api/downloads/distributions/app/installers/latest?channel=stable&platform=win&arch=x64\" -o discord-install.exe"
+    runas: trustedInstaller
+    wait: true
+  - !run:
+    exe: "discord-install.exe"
+    exeDir: true
+    runas: trustedInstaller
+    wait: true

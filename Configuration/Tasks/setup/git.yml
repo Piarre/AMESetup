@@ -1,0 +1,16 @@
+---
+title: Git
+description: Setup Git
+actions:
+  - !writeStatus: { status: "Installing Git" }
+
+  - !run:
+    exe: "curl.exe"
+    args: "-L \"https://github.com/git-for-windows/git/releases/download/v2.44.0.windows.1/Git-2.44.0-64-bit.exe\" -o git-install.exe"
+    runas: trustedInstaller
+    wait: true
+  - !run:
+    exe: "git-install.exe"
+    exeDir: true
+    runas: trustedInstaller
+    wait: true

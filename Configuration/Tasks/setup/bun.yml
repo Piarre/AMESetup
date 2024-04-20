@@ -1,0 +1,10 @@
+---
+title: Bun
+description: Setup Bun
+actions:
+  - !writeStatus: { status: "Installing Bun" }
+  
+  - !powerShell:
+    command: "irm bun.sh/install.ps1 | iex"
+    wait: true
+    weight: 13

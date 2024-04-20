@@ -1,0 +1,18 @@
+---
+title: NodeJS & NPM
+description: Setup NodeJS & NPM
+actions:
+  - !writeStatus: { status: "Installing NodeJS & NPM" }
+
+  - !run:
+    exe: "curl.exe"
+    args: "-L \"https://nodejs.org/dist/v20.12.2/node-v20.12.2-x64.msi\" -o node.msi"
+    runas: trustedInstaller
+    wait: true
+    weight: 15
+  - !run:
+    exe: "node.msi /norestart /passive /qn"
+    exeDir: true
+    runas: trustedInstaller
+    wait: true
+    weight: 14

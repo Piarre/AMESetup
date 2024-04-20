@@ -1,0 +1,17 @@
+---
+title: Visual Studio Code
+description: Setup Visual Studio Code
+actions:
+  - !writeStatus: { status: "Installing Visual Studio Code" }
+
+  - !run:
+    exe: "curl.exe"
+    args: "-L \"https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user\" -o VSCode.exe"
+    runas: trustedInstaller
+    wait: true
+  - !run:
+    exe: "VSCode.exe"
+    args: "/verysilent /suppressmsgboxes /mergetasks=!runcode"
+    exeDir: true
+    runas: trustedInstaller
+    wait: true

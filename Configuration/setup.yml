@@ -1,0 +1,9 @@
+---
+title: Setup
+description: Setup tasks for dev environment
+tasks:
+  - Tasks\setup\discord.yml
+  - Tasks\setup\vscode.yml
+  - Tasks\setup\git.yml
+  - Tasks\setup\node.yml
+  - Tasks\setup\bun.yml
